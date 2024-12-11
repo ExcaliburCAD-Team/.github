@@ -5,7 +5,7 @@
   
   <img src="https://github.com/ExcaliburFRC-CAD-Team/.github/blob/main/profile/logo.png?raw=true" width="64px">
 
-  <a href="">
+  <a href="https://excaliburfrc-cad-team.github.io/.github/">
    
    ```
   Hey!
