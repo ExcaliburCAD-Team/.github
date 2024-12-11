@@ -3,7 +3,7 @@
   
   # [Visit website](https://www.excaliburfrc.com/)
   
-  <img src="profile/logo.png" width="64px">
+  <img src="https://github.com/ExcaliburFRC-CAD-Team/.github/blob/main/profile/logo.png?raw=true" width="64px">
 
   <a href="">
    
