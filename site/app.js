@@ -12,6 +12,7 @@ document.getElementById('formatForm').addEventListener('submit', function(event)
     const systemType = document.getElementById('type').value;
 
     if (modelType === 'Part') {
+
         if (partsName === 'MOTOR' && !motor) {
             alert("You didn't choose Motor.");
             return;
@@ -103,7 +104,7 @@ function updateFieldVisibility() {
     const modelOrderField = document.getElementById('modelOrder').parentElement;
     modelOrderField.style.display = modelType === 'Main_Assembly' ? 'none' : 'block';
 
-    document.getElementById('partsName').parentElement.style.display = modelType === 'Main_Assembly' ? 'none' : 'block';
+    document.getElementById('partsName').parentElement.style.display = modelType === 'Main_Assembly' || modelType === 'Sub_Assembly' ? 'none' : 'block';
 
     document.getElementById('plate').parentElement.style.display = partsName === 'PLATE' ? 'block' : 'none';
 
