@@ -59,7 +59,7 @@ function generateFormatId(systemType, modelType, modelOrder, modelVersion, parts
                 formatParts.push(`${partsName}${space}${plate}`);
             }
         } else if (partsName === 'MOTOR' && motor) {
-            formatParts.push(`${space}${motor}`);
+            formatParts.push(`${partsName}${space}${motor}`);
         } else if (partsName) {
             formatParts.push(partsName);
         }
