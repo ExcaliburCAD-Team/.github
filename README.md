@@ -7,4 +7,4 @@
 > - [Offical Site](https://www.excaliburfrc.com/)
 > - [Github Dekstop Download Link](https://desktop.github.com/download/)
 -------------------------------
-## In Case You Need Any Help Ask [@I-No-oNe](https://github.com/I-No-oNe)
+## In Case You Need Any Help Ask [@I-No-oNe](https://discord.com/users/1051897115447660697)
