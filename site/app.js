@@ -45,23 +45,24 @@ document.getElementById('formatForm').addEventListener('submit', function(event)
 
 function generateFormatId(systemType, modelType, modelOrder, modelVersion, partsName, motor, plate, width, manufactureMethod) {
     const space = "-";
-    const cadId = generateCadId(systemType, modelType, modelOrder, modelVersion);
+    const cadId = generateCadId(systemType, modelType, modelOrder, modelVersion, partsName);
 
     let formatParts = [];
     let manufacture = '';
 
-    if (modelType === 'Main_Assembly') {
-    } else {
-        if (partsName === 'PLATE') {
-            if (plate === 'Aluminium' && width > 0) {
-                formatParts.push(`${partsName}${width}`);
-            } else if (plate !== 'Aluminium') {
-                formatParts.push(`${partsName}${space}${plate}`);
+    if (modelType !== 'Main_Assembly') {
+        if (modelType !== 'Sub_Assembly') {
+            if (partsName === 'PLATE') {
+                if (plate === 'Aluminium' && width > 0) {
+                    formatParts.push(`${partsName}${width}`);
+                } else if (plate !== 'Aluminium') {
+                    formatParts.push(`${partsName}${space}${plate}`);
+                }
+            } else if (partsName === 'MOTOR' && motor) {
+                formatParts.push(`${motor}`);
+            } else if (partsName) {
+                formatParts.push(partsName);
             }
-        } else if (partsName === 'MOTOR' && motor) {
-            formatParts.push(`${partsName}${space}${motor}`);
-        } else if (partsName) {
-            formatParts.push(partsName);
         }
 
         if (modelType !== 'Sub_Assembly' && partsName) {
