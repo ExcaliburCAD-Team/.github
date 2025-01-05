@@ -111,7 +111,7 @@ function updateFieldVisibility() {
 
     document.getElementById('motor').parentElement.style.display = partsName === 'MOTOR' && modelType === 'Part' ? 'block' : 'none';
 
-    document.getElementById('width').parentElement.style.display = plate === 'Aluminium' && modelType === 'Part' ? 'block' : 'none';
+    document.getElementById('width').parentElement.style.display = modelType === 'Part' && partsName === 'PLATE' && plate === 'Aluminium' ? 'block' : 'none';
 
     document.getElementById('manufactureMethod').parentElement.style.display = modelType === 'Main_Assembly' || modelType === 'Sub_Assembly' || !partsName ? 'none' : 'block';
 }
