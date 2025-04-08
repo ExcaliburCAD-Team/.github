@@ -1,3 +1,21 @@
+// Updated JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const colorInfoBtn = document.getElementById('colorInfoBtn');
+    const infoBox = document.getElementById('colorInfo');
+
+    colorInfoBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        infoBox.classList.toggle('active');
+    });
+
+    // Close popup when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!infoBox.contains(e.target) && e.target !== colorInfoBtn) {
+            infoBox.classList.remove('active');
+        }
+    });
+});
+
 document.getElementById('formatForm').addEventListener('submit', function(event) {
     event.preventDefault();
 

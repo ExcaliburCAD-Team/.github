@@ -4,25 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Format ID Generator</title>
     <link rel="stylesheet" href="site/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- A good replace for https://excaliburfrc.github.io/resources -->
+    <button id="colorInfoBtn" title="Color Scheme Info">🎨</button>
+    <div id="colorInfo" class="hidden">
+        <div class="color-item">
+            <div class="color-display" style="background-color: rgb(1, 34, 101);"></div>
+            <span class="rgb-value">RGB: 1, 34, 101</span>
+        </div>
+        <div class="color-item">
+            <div class="color-display" style="background-color: rgb(211, 175, 8);"></div>
+            <span class="rgb-value">RGB: 211, 175, 8</span>
+        </div>    
+    </div>
     <div class="container">
         <h1>Format ID Generator</h1>
         <form id="formatForm">
             <div>
                 <label for="type">System Name:</label>
                 <select id="type" required>
+                    <!-- Add here new systems: -->
                     <option value="RBT">ROBOT</option>
-                    <option value="SWV">SWERVE</option>
-                    <option value="GRP">GRIPPER</option>
-                    <option value="ELEV">ELEVATOR</option>
-                    <option value="CLM">CLIMBER</option>
                     <option value="2D">2D</option>
+                    <option value="SWV">SWERVE</option>
+                    <option value="NWGRP">GRIPPER</option>
+                    <option value="ELEV">ELEVATOR</option>
                     <option value="PROTOTYPE">PROTOTYPE</option>
-                    <option value="BLOCK_BOTS">BLOCK BOTS</option>                    
+                    <option value="BLOCK_BOTS">BLOCK-BOT</option>
                 </select>
             </div>
-
             <div>
                 <label for="modelType">Model Type:</label>
                 <select id="modelType" required>
@@ -31,7 +43,6 @@
                     <option value="Part">Part</option>
                 </select>
             </div>
-
             <div>
                 <label for="modelOrder">Model Order:</label>
                 <select id="modelOrder" required>
@@ -45,8 +56,7 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-            </div>            
-
+            </div>
             <div>
                 <label for="modelVersion">Model Version:</label>
                 <select id="modelVersion" required>
@@ -61,16 +71,17 @@
                     <option value="9">9</option>
                 </select>
             </div>
-
             <div>
                 <label for="partsName">Parts Name:</label>
                 <select id="partsName" required>
+                    <!-- Add here the parts types: -->
                     <option value="PROFILE">PROFILE</option>
                     <option value="CHURRRO">CHURRO</option>
                     <option value="BEARING">BEARING</option>
                     <option value="GEAR">GEAR</option>
                     <option value="HUB">HUBS</option>
                     <option value="SPACER">SPACER</option>
+                    <option value="CASE">CASE</option>
                     <option value="PULLEY">PULLEY</option>
                     <option value="SHAFTS">SHAFTS</option>
                     <option value="SPROCKETS">SPROCKETS</option>
@@ -81,52 +92,46 @@
                     <option value="MOTOR">MOTOR</option>
                 </select>
             </div>
-
             <div>
                 <label for="motor">Motor:</label>
                 <select id="motor">
                     <option value="">Select Motor</option>
+                    <option value="KRAKEN">Kraken</option>
+                    <option value="FALCON">FALCON</option>
                     <option value="NEO">Neo</option>
                     <option value="NEO_VORTEX">Neo Vortex</option>
-                    <option value="KRAKEN">Kraken</option>
                     <option value="BABY_NEO">Baby Neo</option>
                 </select>
             </div>
-
             <div>
                 <label for="plate">Plate:</label>
                 <select id="plate">
                     <option value="">Select Plate</option>
-                    <option value="Aluminium">Aluminium</option>
+                    <option value="ALUMINIUM">Aluminium</option>
                     <option value="WOOD">Wood</option>
                     <option value="POLYCARBONATE">Polycarbonate</option>
                 </select>
             </div>
-
             <div>
                 <label for="width">Width:</label>
                 <input type="number" id="width" min="1">
             </div>
-
             <div>
                 <label for="manufactureMethod">Manufacture Method:</label>
                 <select id="manufactureMethod" required>
                     <option value="CNC">CNC</option>
                     <option value="3D">3D</option>
-                    <option value="COTS">COTS</option>
+                    <option value="COTS">COTS</soption>
                     <option value="BEND">BEND</option>
                     <option value="LASER">LASER</option>
                     <option value="MANUAL">MANUAL</option>
                 </select>
             </div>
-
             <button type="submit">Generate Format ID</button>
         </form>
-
         <h2>Generated Format ID:</h2>
         <p id="result"></p>
     </div>
-
     <script src="site/app.js"></script>
 </body>
 </html>
